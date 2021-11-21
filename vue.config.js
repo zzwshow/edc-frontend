@@ -8,7 +8,11 @@ module.exports = {
   baseUrl: baseUrl, // 根据你的实际情况更改这里
   lintOnSave: false,
   devServer: {
-    publicPath: baseUrl // 和 baseUrl 保持一致
+    publicPath: baseUrl, // 和 baseUrl 保持一致
+    host: '0.0.0.0',
+    port: 8080,
+    https: false,
+    hotOnly: false
   },
   css: {
     loaderOptions: {

@@ -2,10 +2,12 @@
   <div class="login-page">
     <div class="layer bg" id="login"></div>
     <div class="layer flex-center">
-      <!-- logo部分 -->
+      <!-- logo部分 
       <div class="logo-group">
         <img src="./image/logo.png" alt="logo">
       </div>
+      -->
+
       <!-- 表单部分 -->
       <div class="form-group">
         <el-card>
@@ -20,6 +22,7 @@
                 <i slot="prepend" class="fa fa-keyboard-o"></i>
               </el-input>
             </el-form-item>
+            <!--
             <el-form-item prop="code">
               <el-input type="text" v-model="formLogin.code" placeholder="- - - -">
                 <template slot="prepend">验证码</template>
@@ -28,17 +31,21 @@
                 </template>
               </el-input>
             </el-form-item>
+            -->
             <el-button-group>
               <el-button size="default" @click="submit" type="primary">登录</el-button>
+              <!--
               <el-button size="default" @click="resetDb">初始化</el-button>
+              -->
             </el-button-group>
           </el-form>
         </el-card>
       </div>
-      <!-- 快速登录按钮 -->
+      <!-- 快速登录按钮 
       <el-button size="default" type="info" class="button-help" @click="dialogVisible = true">
         快速选择用户（测试权限）
       </el-button>
+      -->
     </div>
     <el-dialog title="快速选择用户" :visible.sync="dialogVisible" width="400px">
       <el-row :gutter="10" style="margin: -20px 0px -10px 0px;">
