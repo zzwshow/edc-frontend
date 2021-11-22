@@ -11,7 +11,7 @@ export function getUser(id) {
 }
 export function getUserPermissionInfo() {
     return request({
-        url: '/user/info',
+        url: '/api/v1/user/info',
         method: 'get'
     })
 }
