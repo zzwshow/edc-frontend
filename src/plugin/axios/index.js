@@ -49,8 +49,8 @@ service.interceptors.request.use(
       const token = util.cookies.get('token')
       if (token && token !== 'undefined') {
         // 让每个请求携带token-- ['Authorization']为自定义key 请根据实际情况自行修改
-        // config.headers['Authorization'] = 'Bearer ' + token
-        config.headers['X-Token'] = token
+        config.headers['Authorization'] = 'Bearer ' + token
+        // config.headers['X-Token'] = token
       }
     }
     return config
@@ -67,7 +67,7 @@ service.interceptors.response.use(
   response => {
     loading.hide(response.config)
     const res = response.data;
-    if (res.code !== 20000) {
+    if (res.statusCode !== 200) {
       Message({
         message: res.msg,
         type: 'error',
